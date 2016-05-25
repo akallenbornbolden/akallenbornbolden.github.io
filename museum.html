@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>The Museum is</h1>
+    <p id="element">
+    </p>
+    <script type="text/javascript">
+      var isOpen= true;
+      var d = new Date();
+      var h = d.getHours();
+      $.ajax({
+         url:"http://artgallery.yale.edu/",
+         type:'GET',
+         dataType :'html',
+         crossDomain : true,
+         success: function(data){
+           console.log($.parseJSON(data))
+            //  $(data).find('#content').html();
+         }
+      });
+      var el = document.getElementById("element");
+
+      if(isOpen){
+        el.innerHTML = "OPEN"
+      }
+      else{
+        el.innerHTML = "CLOSED"
+      }
+    </script>
+  </body>
+</html>
