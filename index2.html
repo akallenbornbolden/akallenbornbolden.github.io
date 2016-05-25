@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
   <body>
+<?php
+$variableee = "joijoij";
+echo $variableee;
+?>
     <h1>The Yale Art Museum is</h1>
     <p id="element">
     </p>
     <script type="text/javascript">
-    // var isOpen= true;
+    var isOpen= true;
       var d = new Date();
       var h = d.getHours();
     // $.ajax({
@@ -20,10 +24,10 @@
     //      console.log($.parseJSON(data))
     //          $(data).find('#content').html();
     //      }
-      // });
+    //   });
       var el = document.getElementById("element");
 
-      if(h >=10 && h <=4)
+      if(isOpen=true)
         el.innerHTML = "OPEN"
       }
       else{
